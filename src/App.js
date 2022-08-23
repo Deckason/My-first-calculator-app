@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import './App.css';
 import Calculator from './Calculator';
 
+export const calculatorContext = createContext()
 function App() {
+
   const [screen1, setScreen1] = useState(null)
   const [screen2, setScreen2] = useState("")
   //const lastOnScreen = screen2.length;
@@ -20,13 +22,16 @@ function App() {
     setScreen2(eval(screen2))
 
   }
+  
   //console.log(screen2)
   //console.log(screen2[lastOnScreen -1])
   //console.log(removeLastOnScreen)
   return (
-    <div className="App">
-      <Calculator />
-    </div>
+    <calculatorContext.Provider value={{screen1,setScreen1,setScreen2,screen2,clear,calculate}}>
+      <div className="App">
+        <Calculator />
+      </div>
+    </calculatorContext.Provider>
   );
 }
 

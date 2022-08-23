@@ -52,11 +52,35 @@ code {
 
 .buttons{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 3fr 1fr;
+  gap: 0.5rem;
+}
+
+.operators{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  gap: 0.5rem;
+}
+.operators button{
+  color: blueviolet;
+  font-size: large;
+ 
+  cursor: pointer;
+  background: rgb(204, 202, 202);
+  border: none;
+}
+
+.num{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin: auto;
 }
-.buttons button{
+.num button{
   height: 4rem;
   color: blueviolet;
   font-weight: bold;
@@ -66,7 +90,8 @@ code {
   background: #fff;
   border: none;
 }
-.buttons .del{
+
+.num .del{
   color: rgb(236, 127, 127);
   
 }
