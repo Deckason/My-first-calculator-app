@@ -7,8 +7,6 @@ function App() {
 
   const [screen1, setScreen1] = useState(null)
   const [screen2, setScreen2] = useState("")
-  //const lastOnScreen = screen2.length;
-  //const removeLastOnScreen = screen2.slice(0,-1)
   function clear() {
     if (screen1) {
       setScreen1("")
@@ -22,10 +20,6 @@ function App() {
     setScreen2(eval(screen2))
 
   }
-  
-  //console.log(screen2)
-  //console.log(screen2[lastOnScreen -1])
-  //console.log(removeLastOnScreen)
   return (
     <calculatorContext.Provider value={{screen1,setScreen1,setScreen2,screen2,clear,calculate}}>
       <div className="App">
